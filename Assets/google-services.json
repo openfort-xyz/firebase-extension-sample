@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "775020371354",
+    "project_id": "test-openfort-extension",
+    "storage_bucket": "test-openfort-extension.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775020371354:android:c14d8781d52599b284ae23",
+        "android_client_info": {
+          "package_name": "com.google.FirebaseUnityAuthTestApp.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775020371354-oprr0c122vn4jne1crs1bo0eou2525qg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.FirebaseUnityAuthTestApp.dev",
+            "certificate_hash": "fa3da2bb57a5763904c7d7fc1c6c7ae8d6fd9b23"
+          }
+        },
+        {
+          "client_id": "775020371354-g3sejs0s1it6odkj9d12u36er6irgs03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg9-Ujk5eWXicBLuS836KSpE2ZvoTNAcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775020371354-g3sejs0s1it6odkj9d12u36er6irgs03.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "775020371354-66ae1v7fdfv1atbiol33u9v89d9p0t2u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.google.FirebaseUnityAuthTestApp.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_android_client_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">775020371354</string>
+  <string name="google_storage_bucket" translatable="false">test-openfort-extension.appspot.com</string>
+  <string name="project_id" translatable="false">test-openfort-extension</string>
+  <string name="google_api_key" translatable="false">AIzaSyCg9-Ujk5eWXicBLuS836KSpE2ZvoTNAcM</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCg9-Ujk5eWXicBLuS836KSpE2ZvoTNAcM</string>
+  <string name="google_app_id" translatable="false">1:775020371354:android:c14d8781d52599b284ae23</string>
+  <string name="default_android_client_id" translatable="false">775020371354-oprr0c122vn4jne1crs1bo0eou2525qg.apps.googleusercontent.com</string>
+  <string name="default_web_client_id" translatable="false">775020371354-g3sejs0s1it6odkj9d12u36er6irgs03.apps.googleusercontent.com</string>
+</resources>

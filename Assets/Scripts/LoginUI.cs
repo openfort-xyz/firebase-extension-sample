@@ -369,11 +369,11 @@ public class LoginUI : MonoBehaviour
 			if (success == SignInStatus.Success)
 			{
 				Debug.Log("Login with Google Play successful.");
-				PlayGamesPlatform.Instance.RequestServerSideAccess(true, authCode =>
+				PlayGamesPlatform.Instance.RequestServerSideAccess(true, serverAuthCode =>
 				{
-					Debug.Log($"Auth code is {authCode}");
+					Debug.Log($"Auth code is {serverAuthCode}");
 					Firebase.Auth.Credential credential =
-						Firebase.Auth.PlayGamesAuthProvider.GetCredential(authCode);
+						Firebase.Auth.PlayGamesAuthProvider.GetCredential(serverAuthCode);
 					auth.SignInAndRetrieveDataWithCredentialAsync(credential).ContinueWith(task => {
 						if (task.IsCanceled) {
 							Debug.LogError("SignInAndRetrieveDataWithCredentialAsync was canceled.");

@@ -362,37 +362,44 @@ public class LoginUI : MonoBehaviour
 	public void AuthenticateToGooglePlayGames()
 	{
 #if UNITY_ANDROID
-		PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
-			.RequestServerAuthCode(false /* Don't force refresh */)
-			.Build();
-		PlayGamesPlatform.InitializeInstance(config);
-		PlayGamesPlatform.DebugLogEnabled = true;
 		PlayGamesPlatform.Activate();
-		Social.localUser.Authenticate((bool success) => {
-			Debug.Log("Google Play Games Initialization Complete - Result: " + success);
-			if (success) {
-				authCode = PlayGamesPlatform.Instance.GetServerAuthCode();
-				Firebase.Auth.Credential credential =
-					Firebase.Auth.PlayGamesAuthProvider.GetCredential(authCode);
-				auth.SignInAndRetrieveDataWithCredentialAsync(credential).ContinueWith(task => {
-					if (task.IsCanceled) {
-						Debug.LogError("SignInAndRetrieveDataWithCredentialAsync was canceled.");
-						return;
-					}
-					if (task.IsFaulted) {
-						Debug.LogError("SignInAndRetrieveDataWithCredentialAsync encountered an error: " + task.Exception);
-						return;
-					}
-					if (task.IsCompleted)
-					{
-						Debug.Log("User created successfully!");
-						HandleSignInWithAuthResult(task);
-					}
+        
+		PlayGamesPlatform.Instance.Authenticate(success =>
+		{
+			if (success == SignInStatus.Success)
+			{
+				Debug.Log("Login with Google Play successful.");
+				PlayGamesPlatform.Instance.RequestServerSideAccess(true, authCode =>
+				{
+					Debug.Log($"Auth code is {authCode}");
+					Firebase.Auth.Credential credential =
+						Firebase.Auth.PlayGamesAuthProvider.GetCredential(authCode);
+					auth.SignInAndRetrieveDataWithCredentialAsync(credential).ContinueWith(task => {
+						if (task.IsCanceled) {
+							Debug.LogError("SignInAndRetrieveDataWithCredentialAsync was canceled.");
+							return;
+						}
+						if (task.IsFaulted) {
+							Debug.LogError("SignInAndRetrieveDataWithCredentialAsync encountered an error: " + task.Exception);
+							return;
+						}
+						if (task.IsCompleted)
+						{
+							Debug.Log("User created successfully!");
+							HandleSignInWithAuthResult(task);
+						}
+					});
 				});
+			}
+			else 
+			{
+				Debug.Log(success.ToString());
+				Debug.LogError("Failed to retrieve Google Play auth code.");
+				//TODO something else?
 			}
 		});
 #else
-		Debug.Log("Google Play Games is not supported on this platform.");
+        Debug.Log("Google Play Games SDK only works on Android devices. Please build your app to an Android device.");
 #endif
 	}
 

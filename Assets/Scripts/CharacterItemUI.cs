@@ -11,10 +11,10 @@ public class CharacterItemUI : MonoBehaviour
 
 	[Space(20f)]
 	[SerializeField] Image characterImage;
-	[SerializeField] TMP_Text characterNameText;
+	[SerializeField] TextMeshProUGUI characterNameText;
 	[SerializeField] Image characterSpeedFill;
 	[SerializeField] Image characterPowerFill;
-	[SerializeField] TMP_Text characterPriceText;
+	[SerializeField] TextMeshProUGUI characterPriceText;
 	[SerializeField] Button characterPurchaseButton;
 
 	[Space(20f)]

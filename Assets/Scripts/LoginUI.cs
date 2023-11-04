@@ -88,6 +88,10 @@ public class LoginUI : MonoBehaviour
 
 			firebaseManagerComponent.InitializeFirebase();
 		}
+
+		#if UNITY_ANDROID && !UNITY_EDITOR
+		AuthenticateToGooglePlayGames();
+		#endif
 	}
 
 	// Display user information.

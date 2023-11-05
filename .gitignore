@@ -76,4 +76,4 @@ crashlytics-build.properties
 user.keystore
 
 /Assets/Firebase
-/Assets/GooglePlayGames
+#/Assets/GooglePlayGames

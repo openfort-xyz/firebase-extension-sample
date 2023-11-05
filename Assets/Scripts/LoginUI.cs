@@ -70,7 +70,11 @@ public class LoginUI : MonoBehaviour
 	private string authCode;
 	void Start()
 	{
-
+#if UNITY_ANDROID && !UNITY_EDITOR
+		AuthenticateToGooglePlayGames();
+		return;
+#endif
+		
 		AddLoginEvents();
 
 		//Auto scroll to selected character  in the login
@@ -88,10 +92,6 @@ public class LoginUI : MonoBehaviour
 
 			firebaseManagerComponent.InitializeFirebase();
 		}
-
-		#if UNITY_ANDROID && !UNITY_EDITOR
-		AuthenticateToGooglePlayGames();
-		#endif
 	}
 
 	// Display user information.

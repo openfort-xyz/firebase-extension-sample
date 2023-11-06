@@ -12,6 +12,12 @@ Follow the [installation guide](https://firebase.google.com/docs/unity/setup#kno
 
 ## Overview
 
+[Firebase](https://firebase.google.com/) is Google's comprehensive app development platform that equips mobile and web game developers with a robust set of backend tools, all supported by Google Cloud's infrastructure.
+
+This integration leverages the [Google Play Games plugin for Unity](https://github.com/playgameservices/play-games-plugin-for-unity) to handle authentication, ensuring a secure and streamlined login experience for users on Android devices.
+
+Through a custom [Firebase extension](https://extensions.dev/extensions/openfort/firestore-openfort-transactions), we've embedded the [Openfort SDK](https://github.com/openfort-xyz/openfort-node), empowering Unity clients to directly harness Openfort's blockchain functionalities. The Firebase SDK facilitates seamless interactions with Openfort's features, enriching the gaming experience with advanced blockchain integration.
+
 ## Application Workflow
 
 //TODO

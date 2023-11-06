@@ -1,4 +1,5 @@
-﻿using UnityEngine ;
+﻿using System;
+using UnityEngine ;
 using TMPro ;
 
 public class Player : MonoBehaviour {
@@ -72,23 +73,23 @@ public class Player : MonoBehaviour {
       }
    }
 
-
-   void OnCollisionEnter2D (Collision2D other) {
-      string tag = other.collider.tag ;
+   private void OnTriggerEnter2D(Collider2D col)
+   {
+      var tag = col.tag ;
 
       if (tag.Equals ("coin")) {
          //Add Coins 
          GameDataManager.AddCoins (32) ;
 
          // Cheating (while moving hold key "C" to get extra coins) 
-         #if UNITY_EDITOR
+#if UNITY_EDITOR
          if (Input.GetKey (KeyCode.C))
             GameDataManager.AddCoins (179) ;
-         #endif
+#endif
 
          GameSharedUI.Instance.UpdateCoinsUIText () ;
 
-         Destroy (other.gameObject) ;
+         Destroy (col.gameObject) ;
       }
    }
 }

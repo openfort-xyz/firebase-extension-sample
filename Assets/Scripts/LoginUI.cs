@@ -230,7 +230,7 @@ public class LoginUI : MonoBehaviour
 	}
 
 	// Create a user with the email and password.
-	private async Task CreateUserWithEmailAsync()
+	public async void CreateUserWithEmailAsync()
 	{
 		try
 		{

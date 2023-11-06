@@ -24,8 +24,8 @@ The integration is further enhanced with a custom [Firebase extension](https://e
 
 ## Prerequisites
 
-1. ### Install Firebase SDK
-Because Firebase...
+### Install Firebase SDK
+    Because Firebase...
 
 + TODO
 + TODO

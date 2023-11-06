@@ -10,6 +10,9 @@ using Firebase.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Firebase;
+using Firebase.Auth;
+using Firebase.Firestore;
 #if (UNITY_IOS || UNITY_TVOS)
 using UnityEngine.SocialPlatforms.GameCenter;
 #elif UNITY_ANDROID
@@ -26,7 +29,7 @@ public class LoginUI : MonoBehaviour
 
 	[Space(20)]
 	[Header("Firebase")]
-	[SerializeField] GameObject firebaseManagerController;
+	[SerializeField] FirebaseManager firebaseManager;
 
 	[Space(20)]
 	[Header("Login Events")]
@@ -68,30 +71,40 @@ public class LoginUI : MonoBehaviour
 	// iOS simulators.
 	protected Firebase.Auth.FirebaseAuth auth;
 	private string authCode;
+	
+	private void OnEnable()
+	{
+		firebaseManager.OnFirebaseInitialized += FirebaseManager_OnInitialized_Handler;
+	}
+	
 	void Start()
 	{
-#if UNITY_ANDROID && !UNITY_EDITOR
-		AuthenticateToGooglePlayGames();
-		return;
-#endif
-		
-		AddLoginEvents();
+		if (!firebaseManager.initialized)
+		{
+			// Initialize Firebase
+			firebaseManager.InitializeFirebase();	
+		}
 
+		// Add button events
+		AddLoginEvents();
 		//Auto scroll to selected character  in the login
 		AutoScrollLoginList(GameDataManager.GetSelectedCharacterIndex());
+	}
 
-		FirebaseManager firebaseManagerComponent = firebaseManagerController.GetComponent<FirebaseManager>();
-		if (firebaseManagerComponent != null)
-		{
-			// Wait for FirebaseManager to be initialized before initializing LoginUI
-			firebaseManagerComponent.OnFirebaseInitialized += () =>
-			{
-				auth = firebaseManagerComponent.auth;
-				InitializeFirebase(); // This is the LoginUI's InitializeFirebase method
-			};
+	private void OnDisable()
+	{
+		firebaseManager.OnFirebaseInitialized += FirebaseManager_OnInitialized_Handler;
+	}
 
-			firebaseManagerComponent.InitializeFirebase();
-		}
+	protected void FirebaseManager_OnInitialized_Handler(FirebaseAuth fAuth, FirebaseFirestore fFirestore)
+	{
+		auth = fAuth;
+		Debug.Log("!!! DEBUGGING: " + auth.App);
+		SubscribeToFirebaseAuthEvents();
+				
+#if UNITY_ANDROID && !UNITY_EDITOR
+		AuthenticateToGooglePlayGames();
+#endif
 	}
 
 	// Display user information.
@@ -137,6 +150,7 @@ public class LoginUI : MonoBehaviour
 	// Track state changes of the auth object.
 	void AuthStateChanged(object sender, System.EventArgs eventArgs)
 	{
+		Debug.Log("!! AUTH STATE CHANGED !!");
 		Firebase.Auth.FirebaseAuth senderAuth = sender as Firebase.Auth.FirebaseAuth;
 		Firebase.Auth.FirebaseUser user = null;
 		if (senderAuth != null) userByAuth.TryGetValue(senderAuth.App.Name, out user);
@@ -175,7 +189,7 @@ public class LoginUI : MonoBehaviour
 	}
 
 	// Handle initialization of the necessary firebase modules:
-	protected void InitializeFirebase()
+	protected void SubscribeToFirebaseAuthEvents()
 	{
 		Debug.Log("Setting up Firebase Auth");
 		auth.StateChanged += AuthStateChanged;
@@ -360,6 +374,7 @@ public class LoginUI : MonoBehaviour
 	{
 		Debug.Log("Attempting to sign anonymously...");
 		DisableUI();
+		Debug.Log("DEBUGGING AUTH: " + auth.App);
 		await auth.SignInAnonymouslyAsync().ContinueWithOnMainThread(HandleSignInWithAuthResult);
 	}
 

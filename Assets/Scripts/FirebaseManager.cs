@@ -6,14 +6,11 @@ using Firebase.Extensions;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Collections;
-using System.IO;
-using System.Linq;
 using System.Threading;
 using System;
 public class FirebaseManager : MonoBehaviour
 {
-    public delegate void FirebaseInitializedHandler();
-    public event FirebaseInitializedHandler OnFirebaseInitialized;
+    public event Action<FirebaseAuth, FirebaseFirestore> OnFirebaseInitialized;
     public static FirebaseManager Instance { get; private set; }
     protected string collectionPath = "";
     // DocumentID within the collection. Set to empty to use an autoid (which
@@ -28,8 +25,10 @@ public class FirebaseManager : MonoBehaviour
     // Whether an operation is in progress.
     public bool operationInProgress;
 
-    public Firebase.Auth.FirebaseAuth auth { get; private set; }
+    public FirebaseAuth auth;
     public FirebaseFirestore db;
+
+    public bool initialized;
 
     void Awake()
     {
@@ -52,15 +51,17 @@ public class FirebaseManager : MonoBehaviour
             if (dependencyStatus == Firebase.DependencyStatus.Available)
             {
                 Debug.Log("Setting up Firebase");
-                auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+                auth = FirebaseAuth.DefaultInstance;
                 db = FirebaseFirestore.DefaultInstance;
-
+                
                 // Notify that Firebase has been initialized
-                OnFirebaseInitialized?.Invoke();
+                OnFirebaseInitialized?.Invoke(auth, db);
+                initialized = true;
             }
             else
             {
                 Debug.LogError("Could not resolve all Firebase dependencies: " + dependencyStatus);
+                initialized = false;
             }
         });
     }

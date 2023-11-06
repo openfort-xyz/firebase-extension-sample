@@ -21,7 +21,7 @@ public class CharacterShopUI : MonoBehaviour
 
 	[Space(20)]
 	[Header("Firebase")]
-	[SerializeField] GameObject firebaseManagerController;
+	[SerializeField] FirebaseManager firebaseManager;
 
 	[Header("Shop Events")]
 
@@ -67,7 +67,15 @@ public class CharacterShopUI : MonoBehaviour
 	public Task previousTask;
 	// Whether an operation is in progress.
 	public bool operationInProgress;
-	private FirebaseManager firebaseManagerComponent;
+
+	private void OnEnable()
+	{
+		firebaseManager.OnFirebaseInitialized += (fAuth, fFirestore) =>
+		{
+			auth = fAuth;
+			db = fFirestore;
+		};
+	}
 
 	void Start()
 	{
@@ -90,19 +98,11 @@ public class CharacterShopUI : MonoBehaviour
 
 		//Auto scroll to selected character  in the shop
 		AutoScrollShopList(GameDataManager.GetSelectedCharacterIndex());
+	}
 
-		firebaseManagerComponent = firebaseManagerController.GetComponent<FirebaseManager>();
-		if (firebaseManagerComponent != null)
-		{
-			// Wait for FirebaseManager to be initialized before initializing LoginUI
-			firebaseManagerComponent.OnFirebaseInitialized += () =>
-			{
-				auth = firebaseManagerComponent.auth;
-				db = firebaseManagerComponent.db;
-			};
-
-			firebaseManagerComponent.InitializeFirebase();
-		}
+	private void OnDisable()
+	{
+		//TODO Unsubsrcibe from OnFirebaseInitialized?
 	}
 
 	void AutoScrollShopList(int itemIndex)
@@ -250,7 +250,7 @@ public class CharacterShopUI : MonoBehaviour
 
 			DocumentReference docRef = db.Collection("players").Document(auth.CurrentUser.UserId).Collection("transaction_intents").Document();
 
-			StartCoroutine(firebaseManagerComponent.WriteDoc(docRef, data));
+			StartCoroutine(firebaseManager.WriteDoc(docRef, data));
 			//Proceed with the purchase operation
 			GameDataManager.SpendCoins(character.price);
 

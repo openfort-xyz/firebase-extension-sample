@@ -1,15 +1,3 @@
-
-## Installation
-
-### Install Firebase Unity SDK
-Follow the [installation guide](https://firebase.google.com/docs/unity/setup#known-issues).
-
-[Firebase Unity SDK](https://firebase.google.com/download/unity)
-
-### Install Play Games plugin for Unity
-Follow the [installation guide](https://firebase.google.com/docs/unity/setup#known-issues).
-[Play Games plugin for Unity](https://github.com/playgameservices/play-games-plugin-for-unity/releases)
-
 ## Overview
 
 [Firebase](https://firebase.google.com/) is Google's all-encompassing app development platform, providing game developers with an array of backend tools powered by Google Cloud.
@@ -23,9 +11,13 @@ The integration is further enhanced with a custom [Firebase extension](https://e
 //TODO
 
 ## Prerequisites
+### Install Firebase Unity SDK
+Follow the [installation guide](https://firebase.google.com/docs/unity/setup#known-issues).
 
-### Install Firebase SDK
-Because Firebase...
+[Firebase Unity SDK](https://firebase.google.com/download/unity)
+
+### Install Play Games plugin for Unity
+Follow the [installation guide](https://firebase.google.com/docs/unity/setup#known-issues).
 
 + TODO
 + TODO

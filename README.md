@@ -23,6 +23,9 @@ The integration is further enhanced with a custom [Firebase extension](https://e
 //TODO
 
 ## Prerequisites
+
+### Install Firebase SDK
+Because Firebase...
 + TODO
 + TODO
     + TODO  

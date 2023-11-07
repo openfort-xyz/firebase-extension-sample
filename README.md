@@ -65,7 +65,7 @@ Activate ***Enable*** toggle, enter the credentials you just saved and choose **
 
 ![Alt text](image-10.png)
 
-Both Google and Google Play sign-in providers are ready:
+Both ***Google*** and ***Google Play*** sign-in providers are ready:
 
 ![Alt text](image-11.png)
 

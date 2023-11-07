@@ -11,6 +11,9 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 //TODO
 
 ## Prerequisites
+
+//TODO Google Play and Google cloud account and project?
+
 ### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
 
@@ -31,7 +34,7 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
   ![Alt text](image-3.png)
 
-## Set up Firebase app
+## Set up Firebase
 
 ### Add Google sign-in provider
 
@@ -68,6 +71,41 @@ Activate ***Enable*** toggle, enter the credentials you just saved and choose **
 Both ***Google*** and ***Google Play*** sign-in providers are ready:
 
 ![Alt text](image-11.png)
+
+## Set up Google Play
+
+> **Reminder:** Use the same Google account you used for setting up your Firebase app.
+
+### Create a new app
+Go to [Play Console](https://play.google.com/console) and create a new app. Enter app details (it's important you select ***Game***), confirm policies and select ***Create app***:
+
+![Alt text](image-12.png)
+
+Under ***Grow --> Play Games Services --> Setup and management --> Configuration***, select ***Create new Play Games Services project*** and choose your Firebase project as a cloud project. Then select ***Use***:
+
+![Alt text](image-13.png)
+
+### Add credentials
+
+Under ***Credentials*** section choose ***Add credential***:
+
+![Alt text](image-14.png)
+
+Select ***Android***:
+
+![Alt text](image-15.png)
+
+Scroll down and select ***Create OAuth client***:
+
+![Alt text](image-16.png)
+
+Choose ***Create OAuth Client ID***:
+
+![Alt text](image-17.png)
+
+This will open the Google Cloud console. Now select ***Android*** as *Application type*, enter a *Name* and fill the *Package name* with the Unity app package name (found in the Android Platform Player Settings):
+
+![Alt text](image-18.png)
 
 ## Test in Editor
 

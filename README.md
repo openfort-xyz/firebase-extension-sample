@@ -11,9 +11,9 @@ The integration is further enhanced with a custom [Firebase extension](https://e
 //TODO
 
 ## Prerequisites
-### Firebase initial setup
+1. #### Clone or download the project and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
 1. #### Follow and complete the [installation guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
-  
+  Before [step 4](https://firebase.google.com/docs/unity/setup?hl=es-419#add-sdks), open 
 
 
 

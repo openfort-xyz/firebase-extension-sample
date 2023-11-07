@@ -62,9 +62,15 @@ Activate ***Enable*** toggle, choose a public-facing name and select ***Save***:
 
 ![Alt text](image-7.png)
 
-A popup will appear. Copy the ***Web client ID*** and the ***Web client secret*** somewhere safe and choose ***Done***. You will see your Google provider enabled. Go ahead and choose ***Add new provider***:
+A popup will appear. Copy the ***Web client ID*** and the ***Web client secret*** somewhere safe and choose ***Done***. You will see your Google provider enabled:
 
 ![Alt text](image-8.png)
+
+Select the provider and choose ***Project Settings***. Under ***Your apps*** section select ***Add fingerprint*** and add your [SHA1 certificate fingerprint](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#find-sha1-certificate-fingerprint). Then choose ***Save***:
+
+![Alt text](image-26.png)
+
+![Alt text](image-27.png)
 
 ### Add Google Play sign-in provider
 
@@ -95,6 +101,8 @@ Under ***Grow --> Play Games Services --> Setup and management --> Configuration
 
 ### Add credentials
 
+#### Add Android OAuth client credential
+
 Under ***Credentials*** section choose ***Add credential***:
 
 ![Alt text](image-14.png)
@@ -117,17 +125,27 @@ This will open the Google Cloud console. Now select ***Android*** as *Applicatio
 
 ![Alt text](image-20.png)
 
-Enter your [SHA1 certificate fingerprint](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/wip/adding-sdks#find-sha1-certificate-fingerprint) and choose ***CREATE***:
+Enter your [SHA1 certificate fingerprint](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#find-sha1-certificate-fingerprint) and choose ***CREATE***:
 
 ![Alt text](image-21.png)
 
+Now you can download the JSON and choose ***OK***:
 
+![Alt text](image-22.png)
 
+Go back to the Google Play console, select ***Done*** and choose your newly created Android OAuth client. Then select ***Save changes***:
 
+![Alt text](image-23.png)
 
+#### Add Game server/Web OAuth client credential
 
+Go back to ***Configuration*** and select ***Add credential***:
 
+![Alt text](image-24.png)
 
+Choose ***Game server***, refresh OAuth clients, select ***Web client (auto created by Google Service)*** (it was created automatically during [this process](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#add-google-sign-in-provider)) and select ***Save changes***:
+
+![Alt text](image-25.png)
 
 
 

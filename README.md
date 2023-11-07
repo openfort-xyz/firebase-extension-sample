@@ -34,6 +34,14 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
   ![Alt text](image-3.png)
 
+### Create a keystore
+
+Follow this [guide](https://docs.unity3d.com/Manual/android-keystore-create.html) to create a new keystore for the Unity project.
+
+### Find SHA1 certificate fingerprint
+
+You need to extract the certificate fingerprint from the keystore created.
+
 ## Set up Firebase
 
 ### Add Google sign-in provider
@@ -106,6 +114,8 @@ Choose ***Create OAuth Client ID***:
 This will open the Google Cloud console. Now select ***Android*** as *Application type*, enter a *Name* and fill the *Package name* with the **Unity app package name** (found in the Android Platform Player Settings):
 
 ![Alt text](image-19.png)
+
+![Alt text](image-20.png)
 
 ## Test in Editor
 

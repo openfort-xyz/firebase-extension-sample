@@ -12,16 +12,16 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
 ## Prerequisites
 
-- #### Sign in to [dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.
-- #### You need a [Google Play Developer account](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
-- #### You need a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- #### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
+- ### Sign in to [dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.
+- ### You need a [Google Play Developer account](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
+- ### You need a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- ### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
 
   ![Alt text](image.png)
 
   Once opened, you will see some reference errors. We will solve this in the next step by importing the Firebase SDK.
-- #### Follow the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
+- ### Follow the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
   On [step 4](https://firebase.google.com/docs/unity/setup?hl=es-419#add-sdks), you just need to import ***FirebaseAuth*** and ***FirebaseFirestore*** packages:
 
   ![Alt text](image-1.png)
@@ -33,9 +33,9 @@ The integration is further enhanced with the [Openfort Firebase extension](https
   Most reference errors should be solved by now. If `UnityEditor.iOS.Extensions.Xcode` error is still standing, select ***Firebase.Editor*** asset, disable ***Validate References*** and choose ***Apply***:
 
   ![Alt text](image-3.png)
-- #### Create a keystore
+- ### Create a keystore
   Follow this [guide](https://docs.unity3d.com/Manual/android-keystore-create.html) to create a new keystore for the Unity project.
-- #### Find SHA1 certificate fingerprint
+- ### Find SHA1 certificate fingerprint
   You need to extract the certificate fingerprint from the created keystore. Follow this [video tutorial](https://www.youtube.com/watch?v=lDXE4lfM0aQ) on how to do it, it also covers the creation of the keystore.
 
 ## Set up Firebase

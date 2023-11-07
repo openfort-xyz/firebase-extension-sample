@@ -147,14 +147,39 @@ Choose ***Game server***, refresh OAuth clients, select ***Web client (auto crea
 
 ![Alt text](image-25.png)
 
+Finally copy the ***OAuth client ID***:
 
+![Alt text](image-28.png)
 
+## Set up Unity project
 
+> **Reminder:** Make sure ***Android*** is selected as a platform in ***Build settings***. 
 
+Go to ***Window --> Google Play Games --> Setup --> Android setup***:
 
+![Alt text](image-30.png)
 
+Paste the ***Game server OAuth client ID*** you just copied under ***Client ID***:
 
-## Test in Editor
+![Alt text](image-31.png)
+
+Go to the [Google Play console](https://play.google.com/console) and on your app's configuration select ***Get resources***:
+
+![Alt text](image-32.png)
+
+Copy the Android (XML):
+
+![Alt text](image-33.png)
+
+In Unity, paste it in ***Resources Definition*** and then select ***Setup***:
+
+![Alt text](image-35.png)
+
+Finally, go to the [Firebase console](https://console.firebase.google.com/?hl=es-419) and under your app configuration, download the ***google-services.json***:
+
+![Alt text](image-36.png)
+
+Import it under your Unity project ***Assets*** folder to make sure every credential is up to date.
 
 ## Test on Android
 

@@ -13,7 +13,7 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 ## Prerequisites
 1. ### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
-  
+
   ![Alt text](image.png)
 
   Once opened, you will see some reference errors. We will solve this in the next step by importing the Firebase SDK.
@@ -27,7 +27,7 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
   ![Alt text](image-2.png)
 
-  Most reference errors should be solved by now. If `UnityEditor.iOS.Extensions.Xcode` error still standing, select ***Firebase.Editor*** asset, disable ***Validate References*** and choose ***Apply***:
+  Most reference errors should be solved by now. If `UnityEditor.iOS.Extensions.Xcode` error is still standing, select ***Firebase.Editor*** asset, disable ***Validate References*** and choose ***Apply***:
 
   ![Alt text](image-3.png)
 

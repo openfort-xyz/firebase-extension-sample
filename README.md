@@ -33,7 +33,7 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
 ## Set up Firebase app
 
-### Add Sign-in providers
+### Add Google sign-in provider
 
 Go to the [Firebase console](https://console.firebase.google.com/?hl=es-419), select your project and select ***Authentication***:
 
@@ -51,10 +51,11 @@ Activate ***Enable*** toggle, choose a public-facing name and select ***Save***:
 
 ![Alt text](image-7.png)
 
-After choosing ***Done*** on the popup that will appear, you will see your Google provider enabled:
+After choosing ***Done*** on the popup that will appear, you will see your Google provider enabled. Go ahead and choose ***Add new provider***:
 
 ![Alt text](image-8.png)
 
+### Add Google Play sign-in provider
 
 
 ## Set up Openfort //TODO?

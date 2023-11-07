@@ -4,15 +4,20 @@
 
 Within Unity, we've integrated the Firebase SDK to facilitate backend functionalities. Coupled with the [Google Play Games plugin for Unity](https://github.com/playgameservices/play-games-plugin-for-unity), it ensures a secure and efficient login for Android users.
 
-The integration is further enhanced with a custom [Firebase extension](https://extensions.dev/extensions/openfort/firestore-openfort-transactions), which incorporates the [Openfort SDK](https://github.com/openfort-xyz/openfort-node). This enables Unity clients to directly leverage Openfort's blockchain capabilities, allowing for sophisticated blockchain interactions within the gaming environment.
+The integration is further enhanced with the [Openfort Firebase extension](https://extensions.dev/extensions/openfort/firestore-openfort-transactions), which incorporates the [Openfort SDK](https://github.com/openfort-xyz/openfort-node). This enables Unity clients to directly leverage Openfort's blockchain capabilities, allowing for sophisticated blockchain interactions within the gaming environment.
 
 ## Application Workflow
 
 //TODO
 
 ## Prerequisites
-1. #### Clone or download the project and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
-1. #### Follow and complete the [installation guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
+1. #### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
+  When opening the project, select ***Ignore*** on this popup:
+  ![Alt text](image.png)
+
+  Once opened, you will see some reference errors. We will solve this in the next step by importing the Firebase SDK.
+
+2. #### Follow and complete the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
   Before [step 4](https://firebase.google.com/docs/unity/setup?hl=es-419#add-sdks), open 
 
 

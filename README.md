@@ -74,7 +74,7 @@ Select the provider and choose ***Project Settings***. Under ***Your apps*** sec
 
 ### Add Google Play sign-in provider
 
-Select ***Google Play*** as a sign-in provider:
+Select ***Add new provider*** and choose ***Google Play***:
 
 ![Alt text](image-9.png)
 

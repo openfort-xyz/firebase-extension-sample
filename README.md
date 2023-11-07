@@ -69,41 +69,6 @@ Both ***Google*** and ***Google Play*** sign-in providers are ready:
 
 ![Alt text](image-11.png)
 
-## Set up Openfort //TODO?
-
-1. #### [Add a Contract](https://dashboard.openfort.xyz/assets/new)
-   This sample requires a contract to run. We use [0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0](https://mumbai.polygonscan.com/address/0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0) (NFT contract deployed in 80001 Mumbai). You can use this for the guide:
-
-   <img src="docs-img/image-1.png" width="500">
-
-2. #### [Add a Policy](https://dashboard.openfort.xyz/policies/new)
-   We aim to cover gas fees for users. Set a new gas policy:
-
-   <img src="docs-img/image.png" width="500">
-
-   Now, add a rule so our contract uses this policy:
-
-   <img src="docs-img/image-2.png" width="500">
-
-## Set up Unity Client
-
-This Unity sample project is already equipped with:
-+ //TODO [Firebase]()
-+ [Google Play Games Unity Plugin (v11.01)](https://github.com/playgameservices/play-games-plugin-for-unity)
-
-To begin, open [unity-client](https://github.com/openfort-xyz/playfab-unity-sample/tree/main/unity-client) with Unity:
-
-1. #### TODO FIREBASE?
-
-2. #### Configure Google Play Games SDK
-    - Even if you've set up the Google Play Games SDK following the [required tutorial](https://www.youtube.com/watch?v=dbLpA2YB6vU), ensure that you've correctly configured all fields by navigating to ***Window --> Google Play Games --> Setup --> Android setup***:
-
-      ![Google Play Games Config 1](docs-img/image-30.png)
-      
-      <img src="docs-img/image-31.png" width="500">
-
-    By doing this, when the game runs on Android, it will utilize Google Play Games for user authentication via PlayFab. Otherwise, the default PlayFab authentication will be used.
-
 ## Test in Editor
 
 ## Test on Android

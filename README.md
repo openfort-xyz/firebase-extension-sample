@@ -40,7 +40,7 @@ Follow this [guide](https://docs.unity3d.com/Manual/android-keystore-create.html
 
 ### Find SHA1 certificate fingerprint
 
-You need to extract the certificate fingerprint from the keystore created.
+You need to extract the certificate fingerprint from the keystore created. Follow this [video tutorial](https://www.youtube.com/watch?v=lDXE4lfM0aQ#:~:text=How%20configure%20the%20Keystore%20for,explanation%2C%20you%20will%20find%20here) on how to do it, it also covers the creation of the keystore.
 
 ## Set up Firebase
 

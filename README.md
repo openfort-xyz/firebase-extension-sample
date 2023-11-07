@@ -19,7 +19,15 @@ The integration is further enhanced with the [Openfort Firebase extension](https
   Once opened, you will see some reference errors. We will solve this in the next step by importing the Firebase SDK.
 
 2. ### Follow the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
-  Before [step 4](https://firebase.google.com/docs/unity/setup?hl=es-419#add-sdks), open 
+  On [step 4](https://firebase.google.com/docs/unity/setup?hl=es-419#add-sdks), you just need to import ***FirebaseAuth*** and ***FirebaseFirestore*** packages:
+
+  ![Alt text](image-1.png)
+
+  Do it one by one and disable ***ExternalDependencyManager*** folder before importing:
+
+  ![Alt text](image-2.png)
+
+  
 
 
 

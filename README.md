@@ -11,15 +11,14 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 //TODO
 
 ## Prerequisites
-1. #### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
-
+1. ### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
   
   ![Alt text](image.png)
 
   Once opened, you will see some reference errors. We will solve this in the next step by importing the Firebase SDK.
 
-2. #### Follow and complete the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
+2. ### Follow the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
   Before [step 4](https://firebase.google.com/docs/unity/setup?hl=es-419#add-sdks), open 
 
 

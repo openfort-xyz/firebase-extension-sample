@@ -81,7 +81,7 @@ Go to [Play Console](https://play.google.com/console) and create a new app. Ente
 
 ![Alt text](image-12.png)
 
-Under ***Grow --> Play Games Services --> Setup and management --> Configuration***, select ***Create new Play Games Services project*** and choose your Firebase project as a cloud project. Then select ***Use***:
+Under ***Grow --> Play Games Services --> Setup and management --> Configuration***, select ***Create new Play Games Services project*** and choose your Firebase project as the cloud project. Then select ***Use***:
 
 ![Alt text](image-13.png)
 
@@ -103,9 +103,9 @@ Choose ***Create OAuth Client ID***:
 
 ![Alt text](image-17.png)
 
-This will open the Google Cloud console. Now select ***Android*** as *Application type*, enter a *Name* and fill the *Package name* with the Unity app package name (found in the Android Platform Player Settings):
+This will open the Google Cloud console. Now select ***Android*** as *Application type*, enter a *Name* and fill the *Package name* with the **Unity app package name** (found in the Android Platform Player Settings):
 
-![Alt text](image-18.png)
+![Alt text](image-19.png)
 
 ## Test in Editor
 

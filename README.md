@@ -31,6 +31,32 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
   ![Alt text](image-3.png)
 
+## Set up Firebase app
+
+### Add Sign-in providers
+
+Go to the [Firebase console](https://console.firebase.google.com/?hl=es-419), select your project and select ***Authentication***:
+
+![Alt text](image-4.png)
+
+Select ***Get started***:
+
+![Alt text](image-5.png)
+
+Select ***Google*** as a sign-in provider:
+
+![Alt text](image-6.png)
+
+Activate ***Enable*** toggle, choose a public-facing name and select ***Save***:
+
+![Alt text](image-7.png)
+
+After choosing ***Done*** on the popup that will appear, you will see your Google provider enabled:
+
+![Alt text](image-8.png)
+
+
+
 ## Set up Openfort //TODO?
 
 1. #### [Add a Contract](https://dashboard.openfort.xyz/assets/new)

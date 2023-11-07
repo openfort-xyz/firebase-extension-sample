@@ -11,17 +11,11 @@ The integration is further enhanced with a custom [Firebase extension](https://e
 //TODO
 
 ## Prerequisites
-### Install Firebase Unity SDK
-Follow the [installation guide](https://firebase.google.com/docs/unity/setup#known-issues).
+### Firebase initial setup
+1. #### Follow and complete the [installation guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
+  
 
-[Firebase Unity SDK](https://firebase.google.com/download/unity)
 
-### Install Play Games plugin for Unity
-Follow the [installation guide](https://firebase.google.com/docs/unity/setup#known-issues).
-
-+ TODO
-+ TODO
-    + TODO  
 
 ## Set up Openfort //TODO?
 

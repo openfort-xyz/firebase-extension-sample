@@ -40,7 +40,7 @@ Follow this [guide](https://docs.unity3d.com/Manual/android-keystore-create.html
 
 ### Find SHA1 certificate fingerprint
 
-You need to extract the certificate fingerprint from the keystore created. Follow this [video tutorial](https://www.youtube.com/watch?v=lDXE4lfM0aQ#:~:text=How%20configure%20the%20Keystore%20for,explanation%2C%20you%20will%20find%20here) on how to do it, it also covers the creation of the keystore.
+You need to extract the certificate fingerprint from the created keystore. Follow this [video tutorial](https://www.youtube.com/watch?v=lDXE4lfM0aQ#:~:text=How%20configure%20the%20Keystore%20for,explanation%2C%20you%20will%20find%20here) on how to do it, it also covers the creation of the keystore.
 
 ## Set up Firebase
 
@@ -116,6 +116,25 @@ This will open the Google Cloud console. Now select ***Android*** as *Applicatio
 ![Alt text](image-19.png)
 
 ![Alt text](image-20.png)
+
+Enter your [SHA1 certificate fingerprint](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/wip/adding-sdks#find-sha1-certificate-fingerprint) and choose ***CREATE***:
+
+![Alt text](image-21.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Test in Editor
 

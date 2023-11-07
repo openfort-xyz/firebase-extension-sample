@@ -51,12 +51,23 @@ Activate ***Enable*** toggle, choose a public-facing name and select ***Save***:
 
 ![Alt text](image-7.png)
 
-After choosing ***Done*** on the popup that will appear, you will see your Google provider enabled. Go ahead and choose ***Add new provider***:
+A popup will appear. Copy the ***Web client ID*** and the ***Web client secret*** somewhere safe and choose ***Done***. You will see your Google provider enabled. Go ahead and choose ***Add new provider***:
 
 ![Alt text](image-8.png)
 
 ### Add Google Play sign-in provider
 
+Select ***Google Play*** as a sign-in provider:
+
+![Alt text](image-9.png)
+
+Activate ***Enable*** toggle, enter the credentials you just saved and choose ***Save***:
+
+![Alt text](image-10.png)
+
+Both Google and Google Play sign-in providers are ready:
+
+![Alt text](image-11.png)
 
 ## Set up Openfort //TODO?
 

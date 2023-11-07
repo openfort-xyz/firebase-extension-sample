@@ -12,7 +12,11 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
 ## Prerequisites
 
-//TODO Google Play and Google cloud account and project?
+### [Sign in to dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.
+
+### You need a [Google Play Developer account](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en)
+
+### You need a [Google Cloud project](https://developers.google.com/workspace/guides/create-project)
 
 ### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
@@ -85,6 +89,36 @@ Activate ***Enable*** toggle, enter the credentials you just saved and choose **
 Both ***Google*** and ***Google Play*** sign-in providers are ready:
 
 ![Alt text](image-11.png)
+
+### Install Openfort Extension
+
+Go to the [Firebase Extensions Hub](https://extensions.dev/extensions/openfort/firestore-openfort-transactions) and choose ***Install in Firebase console***:
+
+![Alt text](image-37.png)
+
+Choose your project to continue:
+
+![Alt text](image-38.png) 
+
+Set up your billing profile and follow the instructions until you need to insert the [Openfort API Secret key](https://dashboard.openfort.xyz/apikeys) and choose ***Create secret***. Leave all the other settings as default:
+
+![Alt text](image-39.png)
+
+Finally choose ***Install extension***. After 3-5 minutes you will see the extension installed:
+
+![Alt text](image-41.png)
+
+Now select ***Get started*** and under ***How this extension works*** section find ***Configure Openfort webhooks***. Copy the URL:
+
+![Alt text](image-42.png)
+
+Go to the [Openfort dashboard - Webhooks](https://dashboard.openfort.xyz/webhooks) and choose ***Add webhook***:
+
+![Alt text](image-40.png)
+
+Paste the webhook URL and leave the *Type* as it is. Choose ***Add webhook***:
+
+![Alt text](image-44.png)
 
 ## Set up Google Play
 
@@ -179,7 +213,7 @@ Finally, go to the [Firebase console](https://console.firebase.google.com/?hl=es
 
 ![Alt text](image-36.png)
 
-Import it under your Unity project ***Assets*** folder to make sure every credential is up to date.
+Import it in your Unity project ***Assets*** folder to make sure every credential is up to date.
 
 ## Test on Android
 

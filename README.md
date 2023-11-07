@@ -27,9 +27,9 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
   ![Alt text](image-2.png)
 
-  
+  Most reference errors should be solved by now. If `UnityEditor.iOS.Extensions.Xcode` error still standing, select ***Firebase.Editor*** asset, disable ***Validate References*** and choose ***Apply***:
 
-
+  ![Alt text](image-3.png)
 
 ## Set up Openfort //TODO?
 

@@ -34,6 +34,11 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 - ### Find SHA1 certificate fingerprint
   You need to extract the certificate fingerprint from the created keystore. Follow this [video tutorial](https://www.youtube.com/watch?v=lDXE4lfM0aQ) on how to do it, it also covers the creation of the keystore.
 
+  This is the command that you will need to run:
+  ```shell
+  keytool -list -v -keystore "path/to/your/keystore" -alias "your_key_alias"
+  ```
+
 ## Set up Firebase
 
 ### Add Google sign-in provider

@@ -6,10 +6,6 @@ Within Unity, we've integrated the Firebase SDK to facilitate backend functional
 
 The integration is further enhanced with the [Openfort Firebase extension](https://extensions.dev/extensions/openfort/firestore-openfort-transactions), which incorporates the [Openfort SDK](https://github.com/openfort-xyz/openfort-node). This enables Unity clients to directly leverage Openfort's blockchain capabilities, allowing for sophisticated blockchain interactions within the gaming environment.
 
-## Application Workflow
-
-//TODO
-
 ## Prerequisites
 
 - ### Sign in to [dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.

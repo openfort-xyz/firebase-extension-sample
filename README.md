@@ -125,16 +125,21 @@ Choose ***Add contract***:
 
 This sample requires a contract to run. We use [0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0](https://mumbai.polygonscan.com/address/0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0) (NFT contract deployed in 80001 Mumbai). You can use the same for this tutorial:
 
-<img src="docs-img/image-1.png" width="500">
+![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_46_05a8645885.png?updated_at=2023-11-09T04:25:24.000Z) 
 
 ### [Add a Policy](https://dashboard.openfort.xyz/policies/new)
+
+Choose ***Add policy***:
+
+![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_47_e043788f2d.png?updated_at=2023-11-09T04:27:17.395Z)
+
 We aim to cover gas fees for users. Set a new gas policy:
 
-<img src="docs-img/image.png" width="500">
+![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_48_3cd0914ae9.png?updated_at=2023-11-09T04:31:49.793Z)
 
 Now, add a rule so our contract uses this policy:
 
-<img src="docs-img/image-2.png" width="500">
+![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_49_74f55004ba.png?updated_at=2023-11-09T04:31:50.888Z)
 
 ## Set up Google Play
 

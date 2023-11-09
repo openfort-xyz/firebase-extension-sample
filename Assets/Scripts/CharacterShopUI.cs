@@ -223,97 +223,80 @@ public class CharacterShopUI : MonoBehaviour
 		return ShopItemsContainer.GetChild(index).GetComponent<CharacterItemUI>();
 	}
 
-	void OnItemPurchased(int index)
+	async void OnItemPurchased(int index)
 	{
-		Character character = characterDB.GetCharacter(index);
-		CharacterItemUI uiItem = GetItemUI(index);
+		// Get the specific document for the current user
+		DocumentReference currentUserDocRef = db.Collection("players").Document(auth.CurrentUser.UserId);
 
-		if (GameDataManager.CanSpendCoins(character.price))
+		try
 		{
-			uiItem.SetCharacterAsLoading();
-			var data = new Dictionary<string, object>
+			DocumentSnapshot snapshot = await currentUserDocRef.GetSnapshotAsync();
+
+			if (snapshot.Exists)
 			{
-				{ "policy", "pol_121d1479-f136-422a-adb4-e496072c76c0" },
-				{ "chainId", 80001 },
-				{ "optimistic", true },
-				{ "interactions", new List<Dictionary<string, object>>
+				// Now that you have the document, you can access "openfortId"
+				string openfortId = snapshot.GetValue<string>("openfortId");
+				Debug.Log("Openfort ID: " + openfortId);
+				
+				Character character = characterDB.GetCharacter(index);
+				CharacterItemUI uiItem = GetItemUI(index);
+
+				if (GameDataManager.CanSpendCoins(character.price))
+				{
+					uiItem.SetCharacterAsLoading();
+					var data = new Dictionary<string, object>
 					{
-						new Dictionary<string, object>
-						{
-							{ "contract", character.contract },
-							{ "functionName", "mint" },
-							{ "functionArgs", new List<string> { "0x64452Dff1180b21dc50033e1680bB64CDd492582" } }
+						{ "policy", "pol_72cf3299-62ba-4660-ab0f-68d13e7a9a8c" },
+						{ "chainId", 80001 },
+						{ "optimistic", true },
+						{ "interactions", new List<Dictionary<string, object>>
+							{
+								new Dictionary<string, object>
+								{
+									{ "contract", character.contract },
+									{ "functionName", "mint" },
+									{ "functionArgs", new List<string> { openfortId } }
+								}
+							}
 						}
-					}
+					};
+
+					DocumentReference docRef = db.Collection("players").Document(auth.CurrentUser.UserId).Collection("transaction_intents").Document();
+
+					StartCoroutine(firebaseManager.WriteDoc(docRef, data));
+					//Proceed with the purchase operation
+					GameDataManager.SpendCoins(character.price);
+
+					//Play purchase FX
+					purchaseFx.Play();
+
+					//Update Coins UI text
+					GameSharedUI.Instance.UpdateCoinsUIText();
+
+					//Update DB's Data
+					characterDB.PurchaseCharacter(index);
+
+					uiItem.SetCharacterAsPurchased();
+					uiItem.OnItemSelect(index, OnItemSelected);
+
+					//Add purchased item to Shop Data
+					GameDataManager.AddPurchasedCharacter(index);
 				}
-			};
-
-			DocumentReference docRef = db.Collection("players").Document(auth.CurrentUser.UserId).Collection("transaction_intents").Document();
-
-			StartCoroutine(firebaseManager.WriteDoc(docRef, data));
-			//Proceed with the purchase operation
-			GameDataManager.SpendCoins(character.price);
-
-			//Play purchase FX
-			purchaseFx.Play();
-
-			//Update Coins UI text
-			GameSharedUI.Instance.UpdateCoinsUIText();
-
-			//Update DB's Data
-			characterDB.PurchaseCharacter(index);
-
-			uiItem.SetCharacterAsPurchased();
-			uiItem.OnItemSelect(index, OnItemSelected);
-
-			//Add purchased item to Shop Data
-			GameDataManager.AddPurchasedCharacter(index);
-
-			// StartCoroutine(MakeAPICall("http://localhost:80/purchase", "POST", formData,
-			// 	successResponse =>
-			// 	{
-			// 		TransactionIntentResponse transactionIntentResponse = JsonUtility.FromJson<TransactionIntentResponse>(successResponse);
-
-			// 		// Execution failed will include a status 0
-			// 		if (transactionIntentResponse.response != null && transactionIntentResponse.response.status == 0)
-			// 		{
-			// 			//Proceed with the purchase operation
-			// 			GameDataManager.SpendCoins(character.price);
-
-			// 			//Play purchase FX
-			// 			purchaseFx.Play();
-
-			// 			//Update Coins UI text
-			// 			GameSharedUI.Instance.UpdateCoinsUIText();
-
-			// 			//Update DB's Data
-			// 			characterDB.PurchaseCharacter(index);
-
-			// 			uiItem.SetCharacterAsPurchased();
-			// 			uiItem.OnItemSelect(index, OnItemSelected);
-
-			// 			//Add purchased item to Shop Data
-			// 			GameDataManager.AddPurchasedCharacter(index);
-			// 		}
-			// 		else
-			// 		{
-			// 			Debug.Log("Error: " + successResponse);
-			// 			uiItem.SetCharacterPrice(character.price);
-			// 		}
-
-			// 	},
-			// 	errorResponse =>
-			// 	{
-			// 		Debug.LogError("Error: " + errorResponse);
-			// 		uiItem.SetCharacterPrice(character.price);
-			// 	}
-			// ));
+				else
+				{
+					//No enough coins..
+					AnimateNoMoreCoinsText();
+					uiItem.AnimateShakeItem();
+				}
+			}
+			else
+			{
+				Debug.Log("Document does not exist.");
+			}
 		}
-		else
+		catch (Exception ex)
 		{
-			//No enough coins..
-			AnimateNoMoreCoinsText();
-			uiItem.AnimateShakeItem();
+			Debug.LogError("Error getting document: " + ex.ToString());
 		}
 	}
 

@@ -17,6 +17,6 @@ public class CharacterShopDatabase : ScriptableObject
 
 	public void PurchaseCharacter(int index)
 	{
-		characters[index].isPurchased = true;
+		//characters[index].isPurchased = true;
 	}
 }

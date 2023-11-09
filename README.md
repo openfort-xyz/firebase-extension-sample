@@ -8,16 +8,16 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
 ## Prerequisites
 
-- ### Sign in to [dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.
-- ### You need a [Google Play Developer account](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
-- ### You need a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- ### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
+- Sign in to [dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.
+- You need a [Google Play Developer account](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
+- You need a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
+- Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
 
   ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_03a708cc91.png?updated_at=2023-11-07T18:41:24.181Z)
 
   Once opened, you will see some reference errors. We will solve this in the next step by importing the Firebase SDK.
-- ### Follow the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
+- Follow the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
   On [step 4](https://firebase.google.com/docs/unity/setup?hl=es-419#add-sdks), you just need to import ***FirebaseAuth*** and ***FirebaseFirestore*** packages:
 
   ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_1_7d8a33fb8d.png?updated_at=2023-11-07T18:41:24.676Z)

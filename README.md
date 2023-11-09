@@ -93,9 +93,9 @@ Choose your project to continue:
 
 ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_38_129ce9d653.png?updated_at=2023-11-07T18:41:44.982Z) 
 
-Set up your billing profile and follow the instructions until you need to insert the [Openfort API Secret key](https://dashboard.openfort.xyz/apikeys) and choose ***Create secret***. Leave all the other settings as default:
+Set up your billing profile and follow the instructions until you need to insert the [Openfort API Secret key](https://dashboard.openfort.xyz/apikeys) and choose ***Create secret***. Also set *Cloud Firestore* to ***Sync***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_39_b21cd55281.png?updated_at=2023-11-07T18:41:33.281Z)
+![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_39_97fd67c417.png?updated_at=2023-11-09T04:43:58.995Z)
 
 Finally choose ***Install extension***. After 3-5 minutes you will see the extension installed:
 

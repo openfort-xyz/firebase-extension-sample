@@ -29,9 +29,9 @@ The integration is further enhanced with the [Openfort Firebase extension](https
   Most reference errors should be solved by now. If `UnityEditor.iOS.Extensions.Xcode` error is still standing, select ***Firebase.Editor*** asset, disable ***Validate References*** and choose ***Apply***:
 
   ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_3_9ea2133564.png?updated_at=2023-11-07T18:41:46.887Z)
-- ### Create a keystore
+- Create a keystore
   Follow this [guide](https://docs.unity3d.com/Manual/android-keystore-create.html) to create a new keystore for the Unity project.
-- ### Find SHA1 certificate fingerprint
+- Find SHA1 certificate fingerprint
   You need to extract the certificate fingerprint from the created keystore. Follow this [video tutorial](https://www.youtube.com/watch?v=lDXE4lfM0aQ) on how to do it, it also covers the creation of the keystore.
 
   This is the command that you will need to run:

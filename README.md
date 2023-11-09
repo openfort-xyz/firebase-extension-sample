@@ -105,13 +105,31 @@ Now select ***Get started*** and under ***How this extension works*** section fi
 
 ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_42_c9e5cfa74b.png?updated_at=2023-11-07T18:41:46.182Z)
 
-Go to the [Openfort dashboard - Webhooks](https://dashboard.openfort.xyz/webhooks) and choose ***Add webhook***:
+## Set up Openfort
+
+### [Add webhook](https://dashboard.openfort.xyz/webhooks)
+
+Choose ***Add webhook***:
 
 ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_40_47d93997bf.png?updated_at=2023-11-07T18:41:38.486Z)
 
-Paste the webhook URL and leave the *Type* as it is. Choose ***Add webhook***:
+Paste the webhook URL you got from the Firebase extension and leave the *Type* as it is. Choose ***Add webhook***:
 
 ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_44_f0baf395ee.png?updated_at=2023-11-07T18:41:44.581Z)
+
+### [Add a Contract](https://dashboard.openfort.xyz/assets/new)
+This sample requires a contract to run. We use [0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0](https://mumbai.polygonscan.com/address/0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0) (NFT contract deployed in 80001 Mumbai). You can use this for the guide:
+
+<img src="docs-img/image-1.png" width="500">
+
+### [Add a Policy](https://dashboard.openfort.xyz/policies/new)
+We aim to cover gas fees for users. Set a new gas policy:
+
+<img src="docs-img/image.png" width="500">
+
+Now, add a rule so our contract uses this policy:
+
+<img src="docs-img/image-2.png" width="500">
 
 ## Set up Google Play
 

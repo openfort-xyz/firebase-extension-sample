@@ -14,21 +14,21 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 - ### Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
 
-  ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_03a708cc91.png?updated_at=2023-11-07T18:41:24.181Z)
+  ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_03a708cc91.png?updated_at=2023-11-07T18:41:24.181Z)
 
   Once opened, you will see some reference errors. We will solve this in the next step by importing the Firebase SDK.
 - ### Follow the [Firebase-Unity setup guide](https://firebase.google.com/docs/unity/setup?hl=es-419).
   On [step 4](https://firebase.google.com/docs/unity/setup?hl=es-419#add-sdks), you just need to import ***FirebaseAuth*** and ***FirebaseFirestore*** packages:
 
-  ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_1_7d8a33fb8d.png?updated_at=2023-11-07T18:41:24.676Z)
+  ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_1_7d8a33fb8d.png?updated_at=2023-11-07T18:41:24.676Z)
 
   Do it one by one and disable ***ExternalDependencyManager*** folder before importing:
 
-  ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_2_352fc42325.png?updated_at=2023-11-07T18:41:37.181Z)
+  ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_2_352fc42325.png?updated_at=2023-11-07T18:41:37.181Z)
 
   Most reference errors should be solved by now. If `UnityEditor.iOS.Extensions.Xcode` error is still standing, select ***Firebase.Editor*** asset, disable ***Validate References*** and choose ***Apply***:
 
-  ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_3_9ea2133564.png?updated_at=2023-11-07T18:41:46.887Z)
+  ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_3_9ea2133564.png?updated_at=2023-11-07T18:41:46.887Z)
 - ### Create a keystore
   Follow this [guide](https://docs.unity3d.com/Manual/android-keystore-create.html) to create a new keystore for the Unity project.
 - ### Find SHA1 certificate fingerprint
@@ -45,65 +45,65 @@ The integration is further enhanced with the [Openfort Firebase extension](https
 
 Go to the [Firebase console](https://console.firebase.google.com/?hl=es-419), select your project and select ***Authentication***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_4_e8b0d867f8.png?updated_at=2023-11-07T18:41:47.295Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_4_e8b0d867f8.png?updated_at=2023-11-07T18:41:47.295Z)
 
 Select ***Get started***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_5_140cfd6f28.png?updated_at=2023-11-07T18:41:35.185Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_5_140cfd6f28.png?updated_at=2023-11-07T18:41:35.185Z)
 
 Select ***Google*** as a sign-in provider:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_6_eacbe66a92.png?updated_at=2023-11-07T18:41:38.487Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_6_eacbe66a92.png?updated_at=2023-11-07T18:41:38.487Z)
 
 Activate ***Enable*** toggle, choose a public-facing name and select ***Save***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_7_4b75cbc33e.png?updated_at=2023-11-07T18:41:40.678Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_7_4b75cbc33e.png?updated_at=2023-11-07T18:41:40.678Z)
 
 A popup will appear. Copy the ***Web client ID*** and the ***Web client secret*** somewhere safe and choose ***Done***. You will see your Google provider enabled:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_8_7d2b07af1c.png?updated_at=2023-11-07T18:41:29.178Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_8_7d2b07af1c.png?updated_at=2023-11-07T18:41:29.178Z)
 
 Select the provider and choose ***Project Settings***. Under ***Your apps*** section select ***Add fingerprint*** and add your [SHA1 certificate fingerprint](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#find-sha1-certificate-fingerprint). Then choose ***Save***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_26_0877bd3b91.png?updated_at=2023-11-07T18:41:44.183Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_26_0877bd3b91.png?updated_at=2023-11-07T18:41:44.183Z)
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_27_9505073e7c.png?updated_at=2023-11-07T18:41:29.584Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_27_9505073e7c.png?updated_at=2023-11-07T18:41:29.584Z)
 
 ### Add Google Play sign-in provider
 
 Select ***Add new provider*** and choose ***Google Play***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_9_7c803a1a83.png?updated_at=2023-11-07T18:41:36.279Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_9_7c803a1a83.png?updated_at=2023-11-07T18:41:36.279Z)
 
 Activate ***Enable*** toggle, enter the credentials you just saved and choose ***Save***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_10_3cd041e888.png?updated_at=2023-11-07T18:41:33.579Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_10_3cd041e888.png?updated_at=2023-11-07T18:41:33.579Z)
 
 Both ***Google*** and ***Google Play*** sign-in providers are ready:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_11_0a946e50ff.png?updated_at=2023-11-07T18:41:31.578Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_11_0a946e50ff.png?updated_at=2023-11-07T18:41:31.578Z)
 
 ### Install Openfort Extension
 
 Go to the [Firebase Extensions Hub](https://extensions.dev/extensions/openfort/firestore-openfort-transactions) and choose ***Install in Firebase console***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_37_663d8ce948.png?updated_at=2023-11-07T18:41:43.778Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_37_663d8ce948.png?updated_at=2023-11-07T18:41:43.778Z)
 
 Choose your project to continue:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_38_129ce9d653.png?updated_at=2023-11-07T18:41:44.982Z) 
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_38_129ce9d653.png?updated_at=2023-11-07T18:41:44.982Z) 
 
 Set up your billing profile and follow the instructions until you need to insert the [Openfort API Secret key](https://dashboard.openfort.xyz/apikeys) and choose ***Create secret***. Also set *Cloud Firestore* to ***Sync***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_39_97fd67c417.png?updated_at=2023-11-09T04:43:58.995Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_39_97fd67c417.png?updated_at=2023-11-09T04:43:58.995Z)
 
 Finally choose ***Install extension***. After 3-5 minutes you will see the extension installed:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_41_9c8adab805.png?updated_at=2023-11-07T18:41:46.977Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_41_9c8adab805.png?updated_at=2023-11-07T18:41:46.977Z)
 
 Now select ***Get started*** and under ***How this extension works*** section find ***Configure Openfort webhooks***. Copy the URL:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_42_c9e5cfa74b.png?updated_at=2023-11-07T18:41:46.182Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_42_c9e5cfa74b.png?updated_at=2023-11-07T18:41:46.182Z)
 
 ## Set up Openfort
 
@@ -111,35 +111,35 @@ Now select ***Get started*** and under ***How this extension works*** section fi
 
 Choose ***Add webhook***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_40_47d93997bf.png?updated_at=2023-11-07T18:41:38.486Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_40_47d93997bf.png?updated_at=2023-11-07T18:41:38.486Z)
 
 Paste the webhook URL you got from the Firebase extension and leave the *Type* as it is. Choose ***Add webhook***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_44_f0baf395ee.png?updated_at=2023-11-07T18:41:44.581Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_44_f0baf395ee.png?updated_at=2023-11-07T18:41:44.581Z)
 
 ### [Add a Contract](https://dashboard.openfort.xyz/assets/new)
 
 Choose ***Add contract***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_45_dff8dbd5d9.png?updated_at=2023-11-09T04:23:43.095Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_45_dff8dbd5d9.png?updated_at=2023-11-09T04:23:43.095Z)
 
 This sample requires a contract to run. We use [0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0](https://mumbai.polygonscan.com/address/0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0) (NFT contract deployed in 80001 Mumbai). You can use the same for this tutorial:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_46_05a8645885.png?updated_at=2023-11-09T04:25:24.000Z) 
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_46_05a8645885.png?updated_at=2023-11-09T04:25:24.000Z) 
 
 ### [Add a Policy](https://dashboard.openfort.xyz/policies/new)
 
 Choose ***Add policy***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_47_e043788f2d.png?updated_at=2023-11-09T04:27:17.395Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_47_e043788f2d.png?updated_at=2023-11-09T04:27:17.395Z)
 
 We aim to cover gas fees for users. Set a new gas policy:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_48_3cd0914ae9.png?updated_at=2023-11-09T04:31:49.793Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_48_3cd0914ae9.png?updated_at=2023-11-09T04:31:49.793Z)
 
 Now, add a rule so our contract uses this policy:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_49_74f55004ba.png?updated_at=2023-11-09T04:31:50.888Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_49_74f55004ba.png?updated_at=2023-11-09T04:31:50.888Z)
 
 ## Set up Google Play
 
@@ -148,11 +148,11 @@ Now, add a rule so our contract uses this policy:
 ### Create a new app
 Go to [Play Console](https://play.google.com/console) and create a new app. Enter app details (it's important you select ***Game***), confirm policies and select ***Create app***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_12_0487318190.png?updated_at=2023-11-07T18:41:44.580Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_12_0487318190.png?updated_at=2023-11-07T18:41:44.580Z)
 
 Under ***Grow --> Play Games Services --> Setup and management --> Configuration***, select ***Create new Play Games Services project*** and choose your Firebase project as the cloud project. Then select ***Use***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_13_5ad11592ff.png?updated_at=2023-11-07T18:41:47.787Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_13_5ad11592ff.png?updated_at=2023-11-07T18:41:47.787Z)
 
 ### Add credentials
 
@@ -160,51 +160,51 @@ Under ***Grow --> Play Games Services --> Setup and management --> Configuration
 
 Under ***Credentials*** section choose ***Add credential***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_14_7e4b6cb5d1.png?updated_at=2023-11-07T18:41:46.982Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_14_7e4b6cb5d1.png?updated_at=2023-11-07T18:41:46.982Z)
 
 Select ***Android***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_15_a46a653f09.png?updated_at=2023-11-07T18:41:46.784Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_15_a46a653f09.png?updated_at=2023-11-07T18:41:46.784Z)
 
 Scroll down and select ***Create OAuth client***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_16_27ab5da789.png?updated_at=2023-11-07T18:41:33.186Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_16_27ab5da789.png?updated_at=2023-11-07T18:41:33.186Z)
 
 Choose ***Create OAuth Client ID***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_17_c6d544e6c4.png?updated_at=2023-11-07T18:41:31.682Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_17_c6d544e6c4.png?updated_at=2023-11-07T18:41:31.682Z)
 
 This will open the Google Cloud console. Now select ***Android*** as *Application type*, enter a *Name* and fill the *Package name* with the **Unity app package name** (found in the Android Platform Player Settings):
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_19_72b69ccb8c.png?updated_at=2023-11-07T18:41:46.678Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_19_72b69ccb8c.png?updated_at=2023-11-07T18:41:46.678Z)
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_20_e3286e880c.png?updated_at=2023-11-07T18:41:47.076Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_20_e3286e880c.png?updated_at=2023-11-07T18:41:47.076Z)
 
 Enter your [SHA1 certificate fingerprint](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#find-sha1-certificate-fingerprint) and choose ***CREATE***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_21_b1c2c44246.png?updated_at=2023-11-07T18:41:34.781Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_21_b1c2c44246.png?updated_at=2023-11-07T18:41:34.781Z)
 
 Now you can download the JSON and choose ***OK***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_22_ee531ceeba.png?updated_at=2023-11-07T18:41:36.781Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_22_ee531ceeba.png?updated_at=2023-11-07T18:41:36.781Z)
 
 Go back to the Google Play console, select ***Done*** and choose your newly created Android OAuth client. Then select ***Save changes***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_23_5ff3dc73de.png?updated_at=2023-11-07T18:41:44.877Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_23_5ff3dc73de.png?updated_at=2023-11-07T18:41:44.877Z)
 
 #### Add Game server/Web OAuth client credential
 
 Go back to ***Configuration*** and select ***Add credential***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_24_b44fc158b9.png?updated_at=2023-11-07T18:41:44.287Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_24_b44fc158b9.png?updated_at=2023-11-07T18:41:44.287Z)
 
 Choose ***Game server***, refresh OAuth clients, select ***Web client (auto created by Google Service)*** (it was created automatically during [this process](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#add-google-sign-in-provider)) and select ***Save changes***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_25_1f76c7f29a.png?updated_at=2023-11-07T18:41:45.679Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_25_1f76c7f29a.png?updated_at=2023-11-07T18:41:45.679Z)
 
 Finally copy the ***OAuth client ID***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_28_ecba674180.png?updated_at=2023-11-07T18:41:30.082Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_28_ecba674180.png?updated_at=2023-11-07T18:41:30.082Z)
 
 ## Set up Unity project
 
@@ -212,27 +212,27 @@ Finally copy the ***OAuth client ID***:
 
 Go to ***Window --> Google Play Games --> Setup --> Android setup***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_30_818b8cbf6d.png?updated_at=2023-11-07T18:41:35.884Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_30_818b8cbf6d.png?updated_at=2023-11-07T18:41:35.884Z)
 
 Paste the ***Game server OAuth client ID*** you just copied under ***Client ID***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_31_421e75f3b2.png?updated_at=2023-11-07T18:41:32.077Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_31_421e75f3b2.png?updated_at=2023-11-07T18:41:32.077Z)
 
 Go to the [Google Play console](https://play.google.com/console) and on your app's configuration select ***Get resources***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_32_52815075fc.png?updated_at=2023-11-07T18:41:44.377Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_32_52815075fc.png?updated_at=2023-11-07T18:41:44.377Z)
 
 Copy the Android (XML):
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_33_6690691229.png?updated_at=2023-11-07T18:41:38.876Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_33_6690691229.png?updated_at=2023-11-07T18:41:38.876Z)
 
 In Unity, paste it in ***Resources Definition*** and then select ***Setup***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_35_b08e422040.png?updated_at=2023-11-07T18:41:46.888Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_35_b08e422040.png?updated_at=2023-11-07T18:41:46.888Z)
 
 Finally, go to the [Firebase console](https://console.firebase.google.com/?hl=es-419) and under your app configuration, download the ***google-services.json***:
 
-![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_36_5048e220db.png?updated_at=2023-11-07T18:41:46.980Z)
+![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_36_5048e220db.png?updated_at=2023-11-07T18:41:46.980Z)
 
 Import it in your Unity project ***Assets*** folder to make sure every credential is up to date.
 

@@ -118,7 +118,12 @@ Paste the webhook URL you got from the Firebase extension and leave the *Type* a
 ![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_44_f0baf395ee.png?updated_at=2023-11-07T18:41:44.581Z)
 
 ### [Add a Contract](https://dashboard.openfort.xyz/assets/new)
-This sample requires a contract to run. We use [0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0](https://mumbai.polygonscan.com/address/0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0) (NFT contract deployed in 80001 Mumbai). You can use this for the guide:
+
+Choose ***Add contract***:
+
+![Alt text](https://strapi-oube.onrender.com/uploads/firebase_extension_unity_img_45_dff8dbd5d9.png?updated_at=2023-11-09T04:23:43.095Z)
+
+This sample requires a contract to run. We use [0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0](https://mumbai.polygonscan.com/address/0x38090d1636069c0ff1Af6bc1737Fb996B7f63AC0) (NFT contract deployed in 80001 Mumbai). You can use the same for this tutorial:
 
 <img src="docs-img/image-1.png" width="500">
 

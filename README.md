@@ -244,7 +244,7 @@ Upon building and running the game on an Android device, the registration/login 
 
 Upon completing the above steps, your Unity game will be fully integrated with Openfort and Firebase. Always remember to test every feature before deploying to guarantee a flawless player experience.
 
-For a deeper understanding of the underlying processes, check out the [tutorial video](//TODO). 
+For a deeper understanding of the underlying processes, check out the [tutorial video](https://youtu.be/3DOZhuqKdG0?feature=shared). 
 
 ## Get support
 If you found a bug or want to suggest a new [feature/use case/sample], please [file an issue](../../issues).

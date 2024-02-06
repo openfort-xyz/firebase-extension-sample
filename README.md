@@ -13,7 +13,7 @@ The integration is further enhanced with the [Openfort Firebase extension](https
       width="100%"
       height="100%"
       src="https://blog-cms.openfort.xyz/uploads/firebase_integration_workflow_f549a770b3.png?updated_at=2024-02-06T08:42:22.189Z"
-      alt='Openfort Unity LevelPlay Sample diagram'
+      alt='Openfort Firebase Extension workflow'
     />
 </div>
 
